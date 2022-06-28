@@ -1,5 +1,5 @@
 
-const form = document.querySelector("add-to-cart")
+const form = document.querySelector(".add-to-cart")
 const minerais = document.querySelector(".minerais");
 const menu = document.querySelector(".menu");
 const backBtn = document.querySelector(".go-back")
@@ -25,17 +25,17 @@ function goBack() {
 	backBtn.classList.add("hide")
 }
 
-function sendMsg(e){
-	e.preventDefault();
-	
-	Email.send({
-    SecureToken : "0e8518d9-8032-4b34-8495-950e0e98c9d8",
+function sendMsg(){	
+Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "camGgtu",
+    Password : "camGgtu2",
     To : 'botoverz@gmail.com',
-    From : "you@isp.com",
+    From : "camille.loisy@outlook.com",
     Subject : "This is the subject",
     Body : "And this is the body"
 }).then(
-  message => alert(message)
+  message => alert("oyoiyef")
 );
 }
 
