@@ -27,11 +27,11 @@ function goBack() {
 
 function sendMsg(){	
 Email.send({
-    Host : "smtp.elasticemail.com",
+    Host : "https://camggtu4.github.io/OverZ/",
     Username : "camGgtu",
     Password : "D5514CBBE39A4A0B29E1011345353BBDA30F",
     To : 'botoverz1@gmail.com',
-    From : "you@isp.com",
+    From : "camille.loisy@outlook.com",
     Subject : "This is the subject",
     Body : "And this is the body"
 }).then(
