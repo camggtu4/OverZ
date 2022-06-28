@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>OverZ</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Diplomata+SC&family=League+Gothic&family=Playfair+Display:wght@700&family=Roboto:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<nav>
+			
+			<ul class="nav-list">
+				<li class="nav-item"><img src="img/pala-logo-noir.png"></li>
+				<li class="nav-item"><a href="#accueil" onclick="accueil()">Accueil</a></li>
+
+				<li class="nav-item"><a href="#shop">Notre Shop</a></li>
+				
+				<li class="nav-item"><a href="#recrutements">Recrutements</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="accueil">
+			<a id="accueil"></a>
+			<h1>OVERZ</h1> <br>
+			<h2>Bienvenue sur notre site !<h2>
+		</div>
+
+		<div class="shop">
+			<a id="shop"></a>
+			<div class="back">
+				<button class="go-back add-to-cart hide" onclick="goBack()">Revenir au menu</button>
+			</div>
+			<div class="shop-title">
+				<h2>Notre shop :</h2>
+			</div>
+			<div class="menu ">
+				  <div class="choix-box">
+				  	<!-- <div class="choix-img"><img src="img/minerais.jpg"></div> -->
+				  	<div class="choix-description">
+				  		<h2>SHOP MINERAIS</h2>
+				  		<p>Ici vous trouverez des minerais en tout genre</p>
+				  		<div class="menu-btn-div">
+				  			<button class="menu-btn" onclick="mineraisBox()">Aller voir</button>
+				  		</div>
+				  	</div>
+				  </div>
+				  <div class="choix-box">
+				  	<!-- <div class="choix-img"><img src="img/minerais.jpg"></div> -->
+				  	<div class="choix-description">
+				  		<h2>SHOP OUTILS</h2>
+				  		<p>Ici vous trouverez des hammers, pickaxes of the god, ect
+							<br>
+				  			Shop à venir
+				  		</p>
+				  		<div class="menu-btn-div">
+				  			<button class="menu-btn">Aller voir</button>
+				  		</div>
+				  	</div> 	
+				  </div>
+				  <div class="choix-box">
+				  	<!-- <div class="choix-img"><img src="img/minerais.jpg"></div> -->
+				  	<div class="choix-description">
+				  		<h2>SHOP STUFF PVP</h2>
+				  		<p>Ici vous trouverez des stuff p4, éppées, sticks, ect
+				  			<br>
+				  			Shop à venir
+				  		</p>
+				  		<div class="menu-btn-div">
+				  			<button class="menu-btn">Aller voir</button>
+				  		</div>
+				  	</div> 	
+				  </div>
+
+
+
+
+
+
+			</div>
+
+
+
+
+			<div class="categories ">
+
+
+						<!--  #######  OUTILS #######--> 
+				<div class="outils hide">
+					
+
+
+
+
+
+				</div>
+
+				<!--  #######  MINERAIS #######--> 
+				<div class="minerais hide">
+
+					<div class="paladium">
+						<div class="product pala">
+							<div class="product-img">
+								<img src="img/pala-ingot.png">
+							</div>
+						<div class="product-description">
+							<p>Lingot de paladium 10$/u</p>
+							<button class="add-to-cart">Ajouter au panier</button>
+						</div>
+					</div>
+
+					<div class="product pala">
+						<div class="product-img">
+							<img src="img/paladium-ore.jpg">
+						</div>
+						<div class="product-description">
+							<p>Minerais de paladium 10$/u</p>
+							<button class="add-to-cart">Ajouter au panier</button>
+						</div>
+
+					</div>
+				   </div>	
+					<div class="titane">
+						<div class="product tit">
+							<div class="product-img">
+								<img src="img/titane-ingot.png">
+							</div>
+							<div class="product-description">
+								<p>Lingot de Titane 10$/u</p>
+								<button class="add-to-cart">Ajouter au panier</button>
+							</div>
+						</div>
+						<div class="product tit">
+							<div class="product-img">
+								<img src="img/titane-ore.jpg">
+							</div>
+							<div class="product-description">
+								<p>Minerais de Titane 10$/u</p>
+								<button class="add-to-cart">Ajouter au panier</button>
+							</div>
+						</div>
+					</div>
+					<div class="amethyst">
+						<div class="product amet">
+							<div class="product-img">
+								<img src="img/titane-ingot.png">
+							</div>			
+							<div class="product-description">
+								<p>Lingot d'amethyst 10$/u</p>
+								<button class="add-to-cart">Ajouter au panier</button>
+							</div>
+						</div>
+						<div class="product amet">
+						<div class="product-img">
+							<img src="img/amethyst-ore.jpg">
+						</div>			
+						<div class="product-description">
+							<p>Minerais d'amethyst 10$/u</p>
+							<button class="add-to-cart">Ajouter au panier</button>
+						</div>
+					</div>
+<!-- 						<div class="product ">
+						<div class="product-img">
+							<img src="img/findium.png">
+						</div>
+						<div class="product-description">
+							<p>Minerais de findium 10$/u</p>
+							<button class="add-to-cart">Ajouter au panier</button>
+						</div> -->
+
+						
+				</div>
+				
+				
+			</div>
+		</div>
+	</main>
+	<footer>
+		
+	</footer>
+	<script src="js/app.js"></script>
+</body>
+</html>
