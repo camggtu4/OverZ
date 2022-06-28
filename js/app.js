@@ -29,12 +29,12 @@ function sendMsg(){
 Email.send({
     Host : "smtp.elasticemail.com",
     Username : "camGgtu",
-    Password : "camGgtu2",
-    To : 'botoverz@gmail.com',
-    From : "camille.loisy@outlook.com",
+    Password : "0e8518d9-8032-4b34-8495-950e0e98c9d8",
+    To : 'botoverz1@gmail.com',
+    From : "you@isp.com",
     Subject : "This is the subject",
     Body : "And this is the body"
 }).then(
-  message => alert("oyoiyef")
+  message => alert(message)
 );
 }
