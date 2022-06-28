@@ -38,6 +38,3 @@ Email.send({
   message => alert("oyoiyef")
 );
 }
-
-form.addEventListener('submit', SendMsg);
-
