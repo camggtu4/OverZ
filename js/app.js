@@ -111,7 +111,7 @@ Email.send({
     Host : "smtp.elasticemail.com",
     Username : "botoverz1@gmail.com",
     Password : "D5514CBBE39A4A0B29E1011345353BBDA30F",
-    To : 'trigger@applet.ifttt.com',
+    To : 'botoverz1@gmail.com',
     From : "camille.loisy@outlook.com",
     Subject : "Nouvelle commande !!",
     Body :"Paladium Ingot : " + parseInt(paladiumIngotQuantity.value) + "<br>" + 
