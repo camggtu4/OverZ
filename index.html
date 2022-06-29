@@ -18,10 +18,9 @@
 			<ul class="nav-list">
 				<li class="nav-item"><img src="img/pala-logo-noir.png"></li>
 				<li class="nav-item"><a href="#accueil" onclick="accueil()">Accueil</a></li>
-
 				<li class="nav-item"><a href="#shop">Notre Shop</a></li>
-				
 				<li class="nav-item"><a href="#recrutements">Recrutements</a></li>
+				<li class="nav-item"><a  onclick="OpenCart()">Panier</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -41,11 +40,15 @@
 				<h2>Notre shop :</h2>
 			</div>
 			<div class="menu ">
+
 				  <div class="choix-box">
 				  	<!-- <div class="choix-img"><img src="img/minerais.jpg"></div> -->
 				  	<div class="choix-description">
 				  		<h2>SHOP MINERAIS</h2>
-				  		<p>Ici vous trouverez des minerais en tout genre</p>
+				  		<p>
+				  			Ici vous trouverez des minerais en tout genre <br>
+				  			Shop en cours de dev
+				  		</p>
 				  		<div class="menu-btn-div">
 				  			<button class="menu-btn" onclick="mineraisBox()">Aller voir</button>
 				  		</div>
@@ -77,16 +80,7 @@
 				  		</div>
 				  	</div> 	
 				  </div>
-
-
-
-
-
-
 			</div>
-
-
-
 
 			<div class="categories ">
 
@@ -94,11 +88,6 @@
 						<!--  #######  OUTILS #######--> 
 				<div class="outils hide">
 					
-
-
-
-
-
 				</div>
 
 				<!--  #######  MINERAIS #######--> 
@@ -111,7 +100,7 @@
 							</div>
 						<div class="product-description">
 							<p>Lingot de paladium 10$/u</p>
-							<button class="add-to-cart" type='button' value="Send Email" onclick="sendMsg()">Acheter</button>
+							<button class="add-to-cart" onclick="AddPalaIngot()" data-choisi="false" >Ajouter au panier</button>
 						</div>
 					</div>
 
@@ -121,7 +110,7 @@
 						</div>
 						<div class="product-description">
 							<p>Minerais de paladium 10$/u</p>
-							<button class="add-to-cart">Ajouter au panier</button>
+							<button class="add-to-cart" onclick="AddPalaOre() " data-choisi="false">Ajouter au panier</button>
 						</div>
 
 					</div>
@@ -133,7 +122,7 @@
 							</div>
 							<div class="product-description">
 								<p>Lingot de Titane 10$/u</p>
-								<button class="add-to-cart">Ajouter au panier</button>
+								<button class="add-to-cart" onclick="AddTitaneIngot()" data-choisi="false">Ajouter au panier</button>
 							</div>
 						</div>
 						<div class="product tit">
@@ -142,7 +131,7 @@
 							</div>
 							<div class="product-description">
 								<p>Minerais de Titane 10$/u</p>
-								<button class="add-to-cart">Ajouter au panier</button>
+								<button class="add-to-cart" onclick="AddTitaneOre()" data-choisi="false">Ajouter au panier</button>
 							</div>
 						</div>
 					</div>
@@ -153,7 +142,7 @@
 							</div>			
 							<div class="product-description">
 								<p>Lingot d'amethyst 10$/u</p>
-								<button class="add-to-cart">Ajouter au panier</button>
+								<button class="add-to-cart" onclick="AddAmethystIngot()" data-choisi="false">Ajouter au panier</button>
 							</div>
 						</div>
 						<div class="product amet">
@@ -162,9 +151,10 @@
 						</div>			
 						<div class="product-description">
 							<p>Minerais d'amethyst 10$/u</p>
-							<button class="add-to-cart">Ajouter au panier</button>
+							<button class="add-to-cart" onclick="AddAmethystOre()" data-choisi="false">Ajouter au panier</button>
 						</div>
 					</div>
+
 <!-- 						<div class="product ">
 						<div class="product-img">
 							<img src="img/findium.png">
@@ -178,6 +168,107 @@
 				</div>
 				
 				
+			</div>
+		</div>
+
+		
+		<div class="cart hide">
+			<div class="cart-title"><h1>Votre panier</h1></div>
+			<div class="cart-container">
+				<div class="cart-paladium hide">
+					<div class="cart-container-img">
+						<img src="img/pala-ingot.png">
+					</div>
+					<div class="cart-container-info">
+						<h2>Paladium</h2>
+						<p>En stock</p>
+					</div>
+					<div class="cart-container-opt">
+						<p>Quantité :</p>
+						<input type="number" id="paladium-ingot-quantity">
+						<br>
+						<button class="supp-cart" onclick="RemovePalaIngot()"> Supprimer Du panier</button> 
+					</div>
+				</div>
+				<div class="cart-paladium-ore hide">
+					<div class="cart-container-img">
+						<img src="img/paladium-ore.jpg">
+					</div>
+					<div class="cart-container-info">
+						<h2>Pala Ore</h2>
+						<p>En stock</p>
+					</div>
+					<div class="cart-container-opt">
+						<p>Quantité :</p>
+						<input type="number" id="paladium-ore-quantity">
+						<br>
+						<button class="supp-cart" onclick="RemovePalaOre()"> Supprimer Du panier</button> 
+					</div>
+				</div>
+
+				<div class="cart-titane hide">
+					<div class="cart-container-img">
+						<img src="img/titane-ingot.png">
+					</div>
+					<div class="cart-container-info">
+						<h2>Titane</h2>
+						<p>En stock</p>
+					</div>
+					<div class="cart-container-opt">
+						<p>Quantité :</p>
+						<input type="number" id="titane-ingot-quantity">
+						<br>
+						<button class="supp-cart" onclick="RemoveTitaneIngot()"> Supprimer Du panier</button> 
+					</div>
+				</div>
+				<div class="cart-titane-ore hide">
+					<div class="cart-container-img">
+						<img src="img/titane-ore.jpg">
+					</div>
+					<div class="cart-container-info">
+						<h2>Titane Ore</h2>
+						<p>En stock</p>
+					</div>
+					<div class="cart-container-opt">
+						<p>Quantité :</p>
+						<input type="number" id="titane-ore-quantity">
+						<br>
+						<button class="supp-cart" onclick="RemoveTitaneOre()"> Supprimer Du panier</button> 
+					</div>
+				</div>
+				<div class="cart-amethyst-ore hide">
+					<div class="cart-container-img">
+						<img src="img/amethyst-ore.jpg">
+					</div>
+					<div class="cart-container-info">
+						<h2>Amethyst Ore</h2>
+						<p>En stock</p>
+					</div>
+					<div class="cart-container-opt">
+						<p>Quantité :</p>
+						<input type="number" id="amethyst-ore-quantity">
+						<br>
+						<button class="supp-cart" onclick="RemoveAmethystOre()"> Supprimer Du panier</button> 
+					</div>
+				</div>
+				<div class="cart-amethyst-ingot hide">
+					<div class="cart-container-img">
+						<img src="img/titane-ingot.png">
+					</div>
+					<div class="cart-container-info">
+						<h2>Amethyst ingot</h2>
+						<p>En stock</p>
+					</div>
+					<div class="cart-container-opt">
+						<p>Quantité :</p>
+						<input type="number" id="amethyst-ingot-quantity">
+						<br>
+						<button class="supp-cart" onclick="RemoveAmethystIngot()"> Supprimer Du panier</button> 
+					</div>
+				</div>
+			</div>
+			<div class="buy-btn">
+				<button onclick="sendMsg()" type="submit">Passer commande</button>
 			</div>
 		</div>
 	</main>
