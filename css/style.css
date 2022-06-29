@@ -7,6 +7,14 @@
 }
 
          /*#################    NAV    #####################*/
+.cart-amethyst-ore.hide,
+.cart-amethyst-ingot.hide,
+.cart.hide,
+.cart-titane-ore.hide,
+.cart-paladium-ore.hide,
+.cart-paladium.hide,
+.cart-titane.hide,
+.shop-title.hide,
 .go-back.hide,
 .menu.hide,
 .minerais.hide {
@@ -49,6 +57,7 @@ nav a{
 a:hover{
 	color: white;
 	transition: 0.3s;
+	cursor: pointer;
 }
 .nav-item {
 	font-weight: uppercase;
@@ -112,10 +121,10 @@ h1 {
 }
 .minerais {
 	display: table;
-	float: ;
+	float: left;
 }
 .paladium {
-	float:  left;
+	float: left;
 	width: 33%;
 }
 .titane {
@@ -242,4 +251,116 @@ h1 {
   transition: 0.3s;
     margin-left: auto;
   margin-right: auto;
+}
+
+.cart {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+.cart h1 {
+	text-align: center;
+	padding: 20px;
+}
+.cart-amethyst-ingot,
+.cart-amethyst-ore,
+.cart-titane-ore,
+.cart-paladium-ore,
+.cart-titane,
+.cart-paladium {
+  align-items: center;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+}
+
+
+.cart-container-img {
+	  background: 
+    linear-gradient(#FFF, #FFF) padding-box,
+    linear-gradient(to right, #ff0409, #FF7F18) border-box;
+  border: 2px solid transparent;
+	width:230px;
+	display: inline-block;
+	justify-content: center;
+	vertical-align: middle;
+	margin: 20px;
+}
+.cart-container-img img:hover{
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+.cart-container-info {
+	margin-left: 20px;
+	border-left: 1px solid grey;
+	padding: 15px;
+}
+
+.cart-container-info p{
+	font-size: 20px;
+}
+.cart-container-info h2 {
+	margin-bottom: 30px;
+	font-size: 46px;
+	font-family: font-family: 'League Gothic', sans-serif;
+	background: linear-gradient(to right, #FF7F18, #ff0409);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+}
+.cart-container-opt {
+	margin: 20px;
+	padding: 15px;
+	border-left: 1px solid grey;
+}
+.cart-container-opt p {
+	margin-bottom: 20px;
+	font-size: 30px;
+	font-family: 'Trispace', sans-serif;
+}
+.cart-container-opt input {
+	border-radius: 10px;
+	padding: 10px;
+}
+.cart-container-opt button {
+	color: red;
+			padding: 10px;
+  background: 
+    linear-gradient(#FFF, #FFF) padding-box,
+    linear-gradient(to right, #ff0409, #FF7F18) border-box;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: .1s;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.cart-container-opt button:hover {
+	 border: 2px solid transparent;
+	transition: .1s;
+
+}
+
+.buy-btn {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.buy-btn  button{
+	padding: 15px;
+  background: 
+    linear-gradient(#FFF, #FFF) padding-box,
+    linear-gradient(to right, #ff0409, #FF7F18) border-box;
+  border-radius: 50em;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.buy-btn button:hover {
+	border-radius: 0px;
+	transition: 0.3s;
 }
